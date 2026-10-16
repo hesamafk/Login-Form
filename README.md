@@ -1,16 +1,34 @@
-# Login-Form
+# Login form UI
 
-Static login UI demo; no real authentication.
+![Desktop preview](docs/preview.jpg)
 
-**Status:** Experimental / portfolio project. Not production-ready.
+A responsive login form interface using HTML, CSS, native JavaScript and local CSS.
 
-## Getting started
-Open `index.html` in a browser (or use a local static web server).
+## Run locally
 
-## Notes
-Do not use demo authentication, sample data, payment or admin UI as a production service without a security review.
+Requires Python 3 for the optional static server. From this repository folder:
 
-## Portfolio source
-This repository contains the project source for local use and review. GitHub Pages deployment is optional. Some features may require a local development server or external dependencies.
+```bash
+python -m http.server 8000
+```
 
-**Note:** This is a learning / portfolio project, not a production-ready service.
+Open http://localhost:8000. No deployment is required.
+
+## Repository structure
+
+- `index.html` — form markup
+- `styles.css` — appearance
+- `script.js` — client-side demo form validation
+- `docs/` — import provenance and review notes
+
+## Scope and dependencies
+
+This is form validation only. It does not verify credentials or create an authenticated session. Password visibility can be toggled accessibly. There is no password reset or phone-login flow. The interface has no CDN dependency.
+
+## Validation
+
+Local HTML/CSS asset references and JavaScript syntax are checked during the import. See `docs/VALIDATION.md` for the actual results and limits. CI is defined in `.github/workflows/quality.yml`.
+
+## Source preservation
+
+All original project files were imported in a separate Git commit before changes. `docs/ORIGINAL_FILES.sha256` lists the archive file checksums. Existing images, fonts and notices are retained. No repository-wide license grant has been added.

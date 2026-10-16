@@ -1,11 +1,17 @@
-$("#loginForm").on("submit", function(e) {
-  e.preventDefault();
-  let email = $("#email").val().trim();
-  let password = $("#password").val().trim();
+const form = document.querySelector('#loginForm');
+const password = document.querySelector('#password');
+const visibilityButton = document.querySelector('#show-password');
+const status = document.querySelector('#form-status');
 
-  if (email && password) {
-    alert("Logged in successfully!");
-  } else {
-    alert("Please enter email and password.");
-  }
+visibilityButton.addEventListener('click', () => {
+  const visible = password.type === 'password';
+  password.type = visible ? 'text' : 'password';
+  visibilityButton.textContent = visible ? 'Hide' : 'Show';
+  visibilityButton.setAttribute('aria-pressed', String(visible));
 });
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+  status.textContent = 'Form checked. An authentication server is needed to sign in.';
+});
+form.addEventListener('input', () => { status.textContent = ''; });
