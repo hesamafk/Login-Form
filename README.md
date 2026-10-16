@@ -1,16 +1,16 @@
-# Login Form
+# Login-Form
 
-A static login interface demo built with HTML, CSS, Bootstrap and jQuery.
+Static login UI demo; no real authentication.
 
-**Status:** Experimental / portfolio project. This interface does not authenticate users or communicate with a backend. The success alert is a demonstration only.
+**Status:** Experimental / portfolio project. Not production-ready.
 
-## Run locally
-Open `index.html` in a browser with an internet connection for CDN assets.
+## Getting started
+Open `index.html` in a browser (or use a local static web server).
 
-## Structure
-- `index.html` — login page
-- `styles.css` — styles
-- `script.js` — demo form handler
-- `.github/workflows/quality.yml` — basic HTML parsing check
+## Notes
+Do not use demo authentication, sample data, payment or admin UI as a production service without a security review.
 
-Do not use this as a production login system without implementing secure server-side authentication.
+## Portfolio source
+This repository contains the project source for local use and review. GitHub Pages deployment is optional. Some features may require a local development server or external dependencies.
+
+**Note:** This is a learning / portfolio project, not a production-ready service.
